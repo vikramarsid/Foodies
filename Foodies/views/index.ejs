@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro">
+<head>
+	<title>Foodies</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/fonts.css"  />
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css"  />
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="stylesheets/font-awesome.min.css">
+  
+    
+	
+	
+	<script src="javascripts/jquery.js"></script>
+	<!--<script src="js/twitter.js"></script>-->
+	<script src="javascripts/general.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://benalman.com/code/projects/jquery-hashchange/jquery.ba-hashchange.js"></script>
+	<script type="text/javascript" src="javascripts/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+		  <p><a href="" id="logo">Foodies</a> 
+	      </p>
+		  <p>&nbsp;</p>
+		  <p>&nbsp;</p>
+		  <p>&nbsp;</p>
+		  <p>&nbsp;</p>
+		  <p>&nbsp;</p>
+<form action="/results" method="POST" name="search">
+		  <table width="495" height="51" border="0" class="text">
+		    <tr>
+      <td height="46" class="text"><font color="#FFFFFF">Find</font></td>
+      <td><label for="find"></label>
+        <input name="find" type="text" id="find" value="" /></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><font color="#FFFFFF">Near</font></td>
+      <td><label for="near"></label>
+        <input type="text" name="near" id="near" /></td>
+      <td>
+        <input type="submit" name="go" id="go" value="Go!" /></td>
+            </tr>
+</table>
+</form>
+			<ul id="menu">
+			  <li class="active"><a href="">home</a></li>
+				<li><a href="">Aboutme</a></li>
+				<li><a href="/writereview">Write a Review</a></li>
+				<li><a href="">FindFriends</a></li>
+				<li><a href="">Messages</a></li>
+                <li><a href="">Talk</a></li>
+                <li><a href="">Events</a></li>
+		  </ul>
+			<div class="cb"></div>
+		</div>
+		
+		<div id="main">
+			<div class="content">
+				
+				<div class="slider">
+					
+					<table width="297" height="28" border="0">
+  <tr>
+    <td width="147"><a href="/signup" class="myButton">SignUp</a></td>
+    <td width="140"><a href="/signin" class="myButton">LogIn</a></td>
+  </tr>
+  </table>
+<img src="images/sliderimage1.png" class="left sliderimage">
+				
+					<div class="items right">
+						<div class="item opened yellow">
+							<h3>Review of the Day</h3>
+							<p style=" font-size:12px"><%=rotd[0].rotd_content%></p></br>
+							<p style=" font-size:12px"><%=rotd[0].rotd_user%> <%=rotd[0].rotd_date%> <%=rotd[0].rotd_location%></p>
+							<p style=" font-size:12px"></p>
+							<p style=" font-size:12px"></p>
+							<img src="images/sliderimage1.png" class="hide">
+					  </div>
+						<div class="item closed orange">
+							<h3>Popular Events</h3>
+							<p style=" font-size:16px"><%=rotd[1].rotd_content%></p>
+							<p style=" font-size:12px"><%=rotd[1].rotd_date%></p>
+							<p style=" font-size:12px"><%=rotd[1].rotd_user%></p>
+							<p style=" font-size:12px"><%=rotd[1].rotd_location%></p>
+							<img src="images/sliderimage2.png" class="hide">
+					  </div>
+						<div class="item closed red">
+						  <h3>Today in Talk</h3>
+							<p style=" font-size:16px"><%=rotd[2].rotd_content%></p>
+							<p style=" font-size:12px"><%=rotd[2].rotd_date%></p>
+							<p style=" font-size:14px"><%=rotd[2].rotd_user%></p>
+							<p style=" font-size:14px"><%=rotd[2].rotd_location%></p>
+							<img src="images/sliderimage1.png" class="hide">
+					  </div>
+				  </div>
+					<div class="cb"></div>
+			  </div>
+				
+			  <div class="services">
+					
+					<div class="servicer">
+					<h2>Best of Foodies</h2>
+					                                         <!--//////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                     <!--//////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                    <div id="w" class="clearfix">
+    <ul id="sidemenu">
+      <li>
+        <a href="#Restaurants-content" class="open"><strong>Restaurants</strong></a>
+      </li>
+
+      <li>
+        <a href="#Food-content"><strong>Food</strong></a>
+      </li>
+      
+      <li>
+        <a href="#Shopping-content"><strong>Shopping</strong></a>
+      </li>
+      
+      <li>
+        <a href="#Nightlife-content"><strong>Nightlife</strong></a>
+      </li>
+      
+       <li>
+        <a href="#Japanese-content"><strong>Japanese</strong></a>
+      </li>
+      
+       <li>
+        <a href="#Coffee-content"><strong>Coffee</strong></a>
+      </li>
+      
+       <li>
+        <a href="#Chinese-content"><strong>Chinese</strong></a>
+      </li>
+      
+       <li>
+        <a href="#Bars-content"><strong>Bars</strong></a>
+      </li>
+      
+      <li>
+        <a href="#Beauty-content"><strong>Beauty & Spa</strong></a>
+      </li>
+      
+      <li>
+        <a href="#Auto-content"><strong>Automotive</strong></a>
+      </li>
+      
+      <li>
+        <a href="#Homeserv-content"><strong>Home Services</strong></a>
+      </li>
+      
+      <li>
+        <a href="#Health-content"><strong>Health & Medical</strong></a>
+      </li>
+      
+      <li>
+        <a href="#More-content"><strong>More Categories</strong></a>
+      </li>
+      
+      
+    </ul>
+    
+    <div id="content">
+        <div id="Restaurants-content" class="contentblock">
+          <h1>Restaurants!</h1>
+          <table width="679" height="303" border="0" style="font-size:14px;float:left; font: Arial, Helvetica, sans-serif; font-weight:400">
+  <tr>
+    <td><img src="<%=rest[0].res_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=rest[0].res_name%></strong></br>
+    Review:<%=rest[0].res_review%></br>
+    Rating:<%=rest[0].res_rating%></td>
+  </tr>
+  <tr>
+    <td><img src="<%=rest[1].res_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=rest[1].res_name%></strong></br>
+    Review: <%=rest[1].res_review%></br>
+    Rating: <%=rest[1].res_rating%></td>
+  </tr>
+  <tr>
+    <td><img src="<%=rest[2].res_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=rest[2].res_name%></strong></br>
+    Review: <%=rest[2].res_review%></br>
+    Rating: <%=rest[2].res_rating%></td>
+  </tr>
+  <tr>
+    <td><img src="<%=rest[3].res_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=rest[3].res_name%></strong></br>
+    Review: <%=rest[3].res_review%></br>
+    Rating: <%=rest[3].res_rating%></td>
+  </tr>
+  <tr>
+    <td><img src="<%=rest[4].res_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=rest[4].res_name%></strong></br>
+    Review: <%=rest[4].res_review%></br>
+    Rating: <%=rest[4].res_rating%></td>
+  </tr>
+</table>
+
+          </div><!-- @end #home-content -->
+        
+        
+        <div id="Food-content" class="contentblock hidden">
+          <h1>Food</h1>
+          <table width="679" height="303" border="0" style="font-size:14px;float:left; font: Arial, Helvetica, sans-serif; font-weight:400">
+  <tr>
+    <td><img src="<%=food[0].food_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=food[0].food_name%></strong></br>
+    Review:<%=food[0].food_review%></br>
+    Rating:<%=food[0].food_rating%></td>
+  </tr>
+  <tr>
+    <td><img src="<%=food[1].food_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=food[1].food_name%></strong></br>
+    Review: <%=food[1].food_review%></br>
+    Rating: <%=food[1].food_rating%></td>
+  </tr>
+  <tr>
+    <td><img src="<%=food[2].food_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=food[2].food_name%></strong></br>
+    Review: <%=food[2].food_review%></br>
+    Rating: <%=food[2].food_rating%></td>
+  </tr>
+  <tr>
+    <td><img src="<%=food[3].food_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=food[3].food_name%></strong></br>
+    Review: <%=food[3].food_review%></br>
+    Rating: <%=food[3].food_rating%></td>
+  </tr>
+  <tr>
+    <td><img src="<%=food[4].food_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=food[4].food_name%></strong></br>
+    Review: <%=food[4].food_review%></br>
+    Rating: <%=food[4].food_rating%></td>
+  </tr>
+</table>
+        </div><!-- @end #about-content -->
+        
+        <div id="Shopping-content" class="contentblock hidden">
+          <h1>Shopping</h1>
+          <img src="images/w1.png" alt="WorkInProgress" width="496" height="344" />
+           </div><!-- @end #ideas-content -->
+        
+        <div id="Nightlife-content" class="contentblock hidden">
+          <h1>Nightlife</h1>
+		<img src="images/w1.png" alt="WorkInProgress" width="496" height="344" />
+          <br><br>
+         </div><!-- @end #content -->
+         
+         <div id="Japanese-content" class="contentblock hidden">
+          <h1>Japanese</h1>
+          <img src="images/w1.png" alt="WorkInProgress" width="496" height="344" />
+        </div><!-- @end #about-content -->
+        
+        <div id="Coffee-content" class="contentblock hidden">
+          <h1>Coffee</h1>
+          <img src="images/w1.png" alt="WorkInProgress" width="496" height="344" />
+        </div><!-- @end #about-content -->
+        
+        <div id="Chinese-content" class="contentblock hidden">
+          <h1>Chinese</h1>
+          <img src="images/w1.png" alt="WorkInProgress" width="496" height="344" />
+        </div><!-- @end #about-content -->
+        
+        <div id="Bars-content" class="contentblock hidden">
+          <h1>Bars</h1>
+          <img src="images/w1.png" alt="WorkInProgress" width="496" height="344" />
+        </div><!-- @end #about-content -->
+        
+        <div id="Beauty-content" class="contentblock hidden">
+          <h1>Beauty</h1>
+          <img src="images/w1.png" alt="WorkInProgress" width="496" height="344" />
+        </div><!-- @end #about-content -->
+        
+        <div id="Auto-content" class="contentblock hidden">
+          <h1>Auto</h1>
+          <img src="images/w1.png" alt="WorkInProgress" width="496" height="344" />
+        </div><!-- @end #about-content -->
+        
+        <div id="Homeserv-content" class="contentblock hidden">
+          <h1>HomeService</h1>
+          <img src="images/w1.png" alt="WorkInProgress" width="496" height="344" />
+        </div><!-- @end #about-content -->
+        
+        <div id="Health-content" class="contentblock hidden">
+          <h1>Health & Medical</h1>
+          <img src="images/w1.png" alt="WorkInProgress" width="496" height="344" />
+        </div><!-- @end #about-content -->
+        
+        <div id="More-content" class="contentblock hidden">
+          <h1>More</h1>
+          <img src="images/w1.png" alt="WorkInProgress" width="496" height="344" />
+        </div><!-- @end #about-content -->
+  </div>
+  
+  <script type="text/javascript">
+$(function(){
+  $('#sidemenu a').on('click', function(e){
+    e.preventDefault();
+
+    if($(this).hasClass('open')) {
+      // do nothing because the link is already open
+    } else {
+      var oldcontent = $('#sidemenu a.open').attr('href');
+      var newcontent = $(this).attr('href');
+      
+      $(oldcontent).fadeOut('fast', function(){
+        $(newcontent).fadeIn().removeClass('hidden');
+        $(oldcontent).addClass('hidden');
+      });
+      
+     
+      $('#sidemenu a').removeClass('open');
+      $(this).addClass('open');
+    }
+  });
+});
+</script>
+                     <!--//////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                     <!--//////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                        
+					</div>
+                    <br />
+<div class="service">
+<h2>&nbsp;</h2>
+<h2>Recent Activity</h2>
+                    
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<table width="679" height="303" border="0" style="font-size:14px;float:left; font: Arial, Helvetica, sans-serif; font-weight:400; vertical-align: auto">
+  <tr>
+    <td width="132" height="157"><img src="<%=rest[5].res_img%>" width="94" height="63" alt="No View" /></td>
+    <td width="537"><strong><%=rest[5].res_name%></strong></br>
+    <%=rest[5].res_review%></br>
+    Rating:<%=rest[5].res_rating%>&nbsp;&nbsp;&nbsp;&nbsp;<%=rest[5].res_address%></td> 
+  </tr>
+  <tr>
+    <td height="100"><img src="<%=rest[6].res_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=rest[6].res_name%></strong></br>
+    <img src="images/bc.jpg" alt="" width="250" height="250" /></br>
+    <%=rest[6].res_review%></br>
+    Rating: <%=rest[6].res_rating%>&nbsp;&nbsp;&nbsp;&nbsp;<%=rest[6].res_address%></td>
+  </tr>
+  <tr>
+    <td height="127"><img src="<%=rest[7].res_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=rest[7].res_name%></strong></br>
+    <%=rest[7].res_review%></br>
+    Rating: <%=rest[7].res_rating%>&nbsp;&nbsp;&nbsp;&nbsp;<%=rest[7].res_address%></td>
+  </tr>
+  <tr>
+    <td height="101"><img src="<%=rest[8].res_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=rest[8].res_name%></strong></br>
+    <%=rest[8].res_review%></br>
+    Rating: <%=rest[8].res_rating%>&nbsp;&nbsp;&nbsp;&nbsp;<%=rest[8].res_address%></td> 
+  </tr>
+  <tr>
+    <td height="100"><img src="<%=rest[9].res_img%>" width="94" height="63" alt="No View" /></td>
+    <td><strong><%=rest[9].res_name%></strong></br>
+    <%=rest[9].res_review%></br>
+    Rating: <%=rest[9].res_rating%>&nbsp;&nbsp;&nbsp;&nbsp;<%=rest[9].res_address%></td>
+  </tr>
+</table>           
+                     <!--//////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                     <!--//////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                    
+                    </div>
+                    
+                    
+                 <div class="servicebottom">
+                    <h2>San Jose Neighborhoods</h2>
+                    <table width="566" height="160" border="0" style="font-size: 14px; float: left; font: Arial, Helvetica, sans-serif; font-weight: 400; vertical-align: auto; margin: 20px;">
+                      <tr>
+    <td width="124">Almaden Valley</td>
+    <td width="160">Alum Rock/East Foothills</td>
+    <td width="132">Rose Garden</td>
+    <td width="132">Berryessa</td>
+  </tr>
+  <tr>
+    <td>Blossom Valley</td>
+    <td>Buena Vista</td>
+    <td>Santa Teresa</td>
+    <td>Burbank</td>
+  </tr>
+  <tr>
+    <td>Cambrian Park</td>
+    <td>Downtown</td>
+    <td>Seven Trees</td>
+    <td>East San Jose</td>
+  </tr>
+  <tr>
+    <td>Evergreen</td>
+    <td>Fairgrounds</td>
+    <td>West San Jose</td>
+    <td>North Valley</td>
+  </tr>
+</table>
+</div>
+                    <!---------------------------------------------------------------------------------->
+                 
+															
+					<div class="cb"></div>
+				</div>
+				
+				<div class="separator">&nbsp;</div>
+				<div class="cb"></div>
+			</div>
+	      <span class="footer"><img src="images\footer.png" width="848" height="209" alt="footer" /></span></div>
+		
+		<div class="credit"><font color="#330000">CmpE 273 Lab Assignement(Fall 2014)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CopyRight - Vikram Arsid</font></div>
+		
+	</div>
+	
+		
+</body>
+</html>
